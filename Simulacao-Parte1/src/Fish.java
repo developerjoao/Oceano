@@ -4,7 +4,7 @@ import java.util.List;
  * 
  * NOTE: This should serve as a superclass to all specific types of fish
  * 
- * @author (your name) 
+ * @author Sandino 
  * @version (a version number or a date)
  */
 public abstract class Fish
