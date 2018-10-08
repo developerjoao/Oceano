@@ -47,19 +47,6 @@ public class Ocean
     }
     
     /**
-     * Place an animal at the given location.
-     * If there is already an animal at the location it will
-     * be lost.
-     * @param fish The fish to be placed.
-     * @param row Row coordinate of the location.
-     * @param col Column coordinate of the location.
-     */
-    public void place(Fish fish, int row, int col)
-    {
-        ocean[row][col] = fish;
-    }
-    
-    /**
      * Empty the field.
      */
     public void clear()
@@ -73,10 +60,35 @@ public class Ocean
     
     /**
      * Clear the given location.
-     * @param row, col The location to clear.
+     * @param location The location to clear.
      */
-    public void clear(int row, int col)
+    public void clear(Location location)
     {
-        ocean[row][col] = null;
+        ocean[location.getRow()][location.getCol()] = null;
+    }
+    
+    /**
+     * Place an fish at the given location.
+     * If there is already an animal at the location it will
+     * be lost.
+     * @param fish The fish to be placed.
+     * @param row Row coordinate of the location.
+     * @param col Column coordinate of the location.
+     */
+    public void place(Object fish, int row, int col)
+    {
+        place(fish, new Location(row, col));
+    }
+    
+    /**
+     * Place an fish at the given location.
+     * If there is already an fish at the location it will
+     * be lost.
+     * @param fish The animal to be placed.
+     * @param location Where to place the animal.
+     */
+    public void place(Object fish, Location location)
+    {
+        ocean[location.getRow()][location.getCol()] = fish;
     }
 }
