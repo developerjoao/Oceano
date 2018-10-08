@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author Jo„o Cabral e Sandino
+ * @author Jo√£o Cabral e Sandino
  */
 
 public class Simulator
