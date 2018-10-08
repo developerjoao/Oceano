@@ -1,6 +1,6 @@
 
 /**
- * (Fill in description and author info here)
+ * @author João Cabral e Sandino
  */
 public class Ocean
 {
@@ -17,7 +17,6 @@ public class Ocean
     	this.height = height;
     	this.width = width;
     	ocean = new Object[height][width];
-        // some code needs to go here
     }
     
     /**
@@ -28,7 +27,6 @@ public class Ocean
      */
     public Fish getFishAt(int row, int col)
     {
-        // put code here
         return (Fish) ocean[row][col];
     }
     
@@ -37,7 +35,6 @@ public class Ocean
      */
     public int getHeight()
     {
-        // put something here
         return this.height;
     }
     
@@ -46,7 +43,40 @@ public class Ocean
      */
     public int getWidth()
     {
-        // and something here
         return this.width;
+    }
+    
+    /**
+     * Place an animal at the given location.
+     * If there is already an animal at the location it will
+     * be lost.
+     * @param fish The fish to be placed.
+     * @param row Row coordinate of the location.
+     * @param col Column coordinate of the location.
+     */
+    public void place(Fish fish, int row, int col)
+    {
+        ocean[row][col] = fish;
+    }
+    
+    /**
+     * Empty the field.
+     */
+    public void clear()
+    {
+        for(int row = 0; row < height; row++) {
+            for(int col = 0; col < width; col++) {
+                ocean[row][col] = null;
+            }
+        }
+    }
+    
+    /**
+     * Clear the given location.
+     * @param row, col The location to clear.
+     */
+    public void clear(int row, int col)
+    {
+        ocean[row][col] = null;
     }
 }
