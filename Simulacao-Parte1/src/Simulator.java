@@ -10,7 +10,9 @@ import java.util.Random;
 
 public class Simulator
 {
-	private static final double FISH_CREATION_PROBABILITY = 0.02;
+	private static final double SARDINE_CREATION_PROBABILITY = 0.02;
+	private static final double TUNA_CREATION_PROBABILITY = 0.02;
+	private static final double SHARK_CREATION_PROBABILITY = 0.02;
 	// Constants representing configuration information for the simulation.
     // The default width for the grid.
     private static final int DEFAULT_WIDTH = 50;
@@ -47,14 +49,16 @@ public class Simulator
         simView = new SimulatorView(height, width);
         
         // define in which color fish should be shown
-        simView.setColor(Fish.class, Color.red);
+        simView.setColor(Sardine.class, Color.red);
+        simView.setColor(Tuna.class, Color.blue);
+        simView.setColor(Shark.class, Color.green);
         
         reset();
     }
     
     public void run(int steps)
     {
-        runLongSimulation();
+        simulate(steps);
         
         //simView.showStatus(0, ocean);
     }
@@ -125,16 +129,21 @@ public class Simulator
         ocean.clear();
         for(int row = 0; row < ocean.getHeight(); row++) {
             for(int col = 0; col < ocean.getWidth(); col++) {
-                if(rand.nextDouble() <= FISH_CREATION_PROBABILITY) {
+                if(rand.nextDouble() <= SARDINE_CREATION_PROBABILITY) {
                     Location location = new Location(row, col);
                     Fish fish = new Sardine(true, ocean, location);
                     fishes.add(fish);
                 }
-//                else if(rand.nextDouble() <= RABBIT_CREATION_PROBABILITY) {
-//                    Location location = new Location(row, col);
-//                    Rabbit rabbit = new Rabbit(true, ocean, location);
-//                    animals.add(rabbit);
-//                }
+                else if(rand.nextDouble() <= TUNA_CREATION_PROBABILITY) {
+                    Location location = new Location(row, col);
+                    Fish fish = new Tuna(true, ocean, location);
+                    fishes.add(fish);
+                }
+                else if(rand.nextDouble() <= SHARK_CREATION_PROBABILITY) {
+                    Location location = new Location(row, col);
+                    Fish fish = new Shark(true, ocean, location);
+                    fishes.add(fish);
+                }
                 // else leave the location empty.
             }
         }
