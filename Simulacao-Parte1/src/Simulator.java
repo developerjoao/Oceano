@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * @author Jo√£o Cabral e Sandino
+ * @author Jo„o Cabral e Sandino
  */
 
 public class Simulator
@@ -104,7 +104,7 @@ public class Simulator
             }
         }
                
-        // Add the newly born foxes and rabbits to the main lists.
+        // Add the newly born fishes to the main lists.
         fishes.addAll(newFishes);
 
         simView.showStatus(step, ocean);
@@ -114,14 +114,26 @@ public class Simulator
 	{
 		step = 0;
 		fishes.clear();
+		populateSeaweed();
 		populate();
     
 		// Show the starting state in the view.
 		simView.showStatus(step, ocean);
 	}
 	
+	public void populateSeaweed(){
+		ocean.clear();
+        for(int row = 0; row < ocean.getHeight(); row++) {
+            for(int col = 0; col < ocean.getWidth(); col++) {
+                Location location = new Location(row, col);
+                Seaweed seaweed = new Seaweed(ocean, location);
+                ocean.place(seaweed, location);
+            }
+    	}
+    }
+	
 	/**
-     * Randomly populate the ocean with foxes and rabbits.
+     * Randomly populate the ocean with the Fishes.
      */
     private void populate()
     {
