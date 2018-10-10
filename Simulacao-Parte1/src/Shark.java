@@ -53,7 +53,10 @@ public class Shark extends Fish
     		Location location = getLocation();
     		Location newLocation = findFood(location);
     		if(newLocation == null) {
-    			newLocation = getOcean().freeAdjacentLocation(location);
+    			newLocation = findShark(location);
+    			if(newLocation == null) {
+    				newLocation = getOcean().freeAdjacentLocation(location);
+    			}
     		}
     		if(newLocation != null) {
     			setLocation(newLocation);
@@ -78,6 +81,24 @@ public class Shark extends Fish
     	if(foodLevel <= 0) {
     		setDead();
     	}
+    }
+    
+    private Location findShark(Location location)
+    {
+    	Ocean ocean = getOcean();
+    	List<Location> adjacents = ocean.adjacentLocations(location);
+    	
+    	for(Location adjacent : adjacents) {
+    		Object fish = ocean.getFishAt(adjacent.getRow(), adjacent.getCol());
+    		if(fish instanceof Shark) {
+    			Shark shark = (Shark) fish;
+    			if(shark.isAlive()) {
+    				shark.setDead();
+        			return adjacent;
+    			}
+    		}
+    	}
+    	return null;
     }
     
     private Location findFood(Location location) 
