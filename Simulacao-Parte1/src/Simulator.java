@@ -10,8 +10,8 @@ import java.util.Random;
 
 public class Simulator
 {
-	private static final double SARDINE_CREATION_PROBABILITY = 0.02;
-	private static final double TUNA_CREATION_PROBABILITY = 0.02;
+	private static final double SARDINE_CREATION_PROBABILITY = 0.08;
+	private static final double TUNA_CREATION_PROBABILITY = 0.06;
 	private static final double SHARK_CREATION_PROBABILITY = 0.02;
 	// Constants representing configuration information for the simulation.
     // The default width for the grid.
@@ -29,7 +29,7 @@ public class Simulator
     
     public static void main(String[] args) 
     {
-        Simulator sim = new Simulator(50, 60);
+        Simulator sim = new Simulator( 100, 200);
         sim.run(1000);
     }
     
