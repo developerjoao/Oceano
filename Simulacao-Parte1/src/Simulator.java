@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * @author Jo„o Cabral e Sandino
+ * @author Jo√£o Cabral e Sandino
  */
 
 public class Simulator
