@@ -77,7 +77,19 @@ public class Sardine extends Fish
 	
 	private Location findFood(Location location)
 	{
-		//TODO
+		Ocean ocean = getOcean();
+		List<Location> adjacent = ocean.adjacentLocations(getLocation());
+		Iterator<Location> it = adjacent.iterator();
+		while(it.hasNext()) {
+			Location where = it.next();
+			Object seaweed = ocean.getObjectAt(where.getRow(), where.getCol());
+			if(seaweed instanceof Seaweed) {
+				Seaweed food = (Seaweed) seaweed;
+				foodLevel += food.getAmmount();
+				return where;
+			}
+			
+		}
 		return null;
 	}
 	

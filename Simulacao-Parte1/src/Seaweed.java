@@ -19,4 +19,8 @@ public class Seaweed {
 		this.location = location;
 		this.ammount = rand.nextInt(11);
 	}
+	
+	public int getAmmount() {
+		return this.ammount;
+	}
 }
