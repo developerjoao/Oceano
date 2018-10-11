@@ -103,6 +103,8 @@ public class Simulator
                 it.remove();
             }
         }
+        
+        ocean.growWeed();
                
         // Add the newly born fishes to the main lists.
         fishes.addAll(newFishes);

@@ -161,6 +161,21 @@ public class Ocean
         return seaweeds[row][col];
     }
     
+    public void growWeed() {
+    	Random rand = new Random();
+        for(int row = 0; row < height; row++) {
+            for(int col = 0; col < width; col++) {
+                Location location = new Location(row, col);
+                Seaweed weed = (Seaweed) getWeedAt(location);
+                weed.regenerate(rand.nextInt(11));
+                if(!weed.getEaten()) {
+                	weed.grow();
+                }
+                weed.enableGrow();
+            }
+    	}
+    }
+    
     /**
      * Get a shuffled list of the free adjacent locations.
      * @param location Get locations adjacent to this.

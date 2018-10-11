@@ -86,6 +86,7 @@ public class Sardine extends Fish
 			if(seaweed instanceof Seaweed && ocean.getObjectAt(where) == null) {
 				Seaweed food = (Seaweed) seaweed;
 				foodLevel = food.getAmmount();
+				food.eaten();
 				return where;
 			}
 			
