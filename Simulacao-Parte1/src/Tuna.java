@@ -11,8 +11,8 @@ import java.util.Random;
 public class Tuna extends Fish
 {
 	private static final int BREEDING_AGE = 5;
-	private static final int MAX_AGE = 35;
-	private static final double BREEDING_PROBABILITY = 0.20;
+	private static final int MAX_AGE = 45;
+	private static final double BREEDING_PROBABILITY = 0.35;
 	private static final int MAX_LITTER_SIZE = 5;
 	
 	private static final int SARDINE_FOOD_VALUE = 10;
