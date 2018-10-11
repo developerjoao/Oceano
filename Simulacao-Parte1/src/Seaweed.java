@@ -1,10 +1,8 @@
+import java.util.List;
 import java.util.Random;
 /**
- * Write a description of class Fish here.
  * 
- * NOTE: This should serve as a superclass to all specific types of fish
- * 
- * @author João Cabral
+ * @author João Cabral e Sandino
  * @version (a version number or a date)
  */
 public class Seaweed {

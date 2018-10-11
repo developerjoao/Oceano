@@ -6,7 +6,7 @@ import java.util.Random;
  * Sharks age, move, breed, and die.
  * Sharks eat groper or herring but they prefer groper.
  * Sharks are loners - they prefer not to swim next to each other
- * @author Sandino
+ * @author Sandino e João Cabral
  */
 public class Shark extends Fish
 {

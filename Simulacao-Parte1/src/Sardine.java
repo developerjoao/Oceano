@@ -8,7 +8,7 @@ import java.util.Random;
  * They exhibit flocking behaviour - they tend to seek company. 
  * If they spot a predator close by, they panic.
  * 
- * @author sandino
+ * @author Sandino e João Cabral
  * 
  */
 public class Sardine extends Fish
@@ -85,7 +85,7 @@ public class Sardine extends Fish
 			Object seaweed = ocean.getObjectAt(where.getRow(), where.getCol());
 			if(seaweed instanceof Seaweed) {
 				Seaweed food = (Seaweed) seaweed;
-				foodLevel += food.getAmmount();
+				foodLevel = food.getAmmount();
 				return where;
 			}
 			

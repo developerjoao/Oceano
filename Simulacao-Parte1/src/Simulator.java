@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * @author Jo√£o Cabral e Sandino
+ * @author Jo„o Cabral e Sandino
  */
 
 public class Simulator
@@ -13,6 +13,7 @@ public class Simulator
 	private static final double SARDINE_CREATION_PROBABILITY = 0.08;
 	private static final double TUNA_CREATION_PROBABILITY = 0.06;
 	private static final double SHARK_CREATION_PROBABILITY = 0.02;
+	private static final double SEAWEED_CREATION_PROBABILITY = 0.04;
 	// Constants representing configuration information for the simulation.
     // The default width for the grid.
     private static final int DEFAULT_WIDTH = 50;
@@ -30,7 +31,7 @@ public class Simulator
     public static void main(String[] args) 
     {
         Simulator sim = new Simulator( 100, 200);
-        sim.run(1000);
+        sim.run(100);
     }
     
     
@@ -114,7 +115,7 @@ public class Simulator
 	{
 		step = 0;
 		fishes.clear();
-		populateSeaweed();
+		//populateSeaweed();
 		populate();
     
 		// Show the starting state in the view.
