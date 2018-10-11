@@ -13,7 +13,7 @@ import java.util.Random;
  */
 public class Sardine extends Fish
 {
-	private static final int BREEDING_AGE = 5;
+	private static final int BREEDING_AGE = 2;
 	private static final int MAX_AGE = 75;
 	private static final double BREEDING_PROBABILITY = 0.60;
 	private static final int MAX_LITTER_SIZE = 15;
