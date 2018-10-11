@@ -8,15 +8,15 @@ import java.util.Random;
  * They exhibit flocking behaviour - they tend to seek company. 
  * If they spot a predator close by, they panic.
  * 
- * @author Sandino e João Cabral
+ * @author Sandino e Joï¿½o Cabral
  * 
  */
 public class Sardine extends Fish
 {
 	private static final int BREEDING_AGE = 5;
 	private static final int MAX_AGE = 75;
-	private static final double BREEDING_PROBABILITY = 0.45;
-	private static final int MAX_LITTER_SIZE = 10;
+	private static final double BREEDING_PROBABILITY = 0.60;
+	private static final int MAX_LITTER_SIZE = 15;
 	
 	private static final int PLANKTON_FOOD_VALUE = 10;
 	
@@ -82,8 +82,8 @@ public class Sardine extends Fish
 		Iterator<Location> it = adjacent.iterator();
 		while(it.hasNext()) {
 			Location where = it.next();
-			Object seaweed = ocean.getObjectAt(where.getRow(), where.getCol());
-			if(seaweed instanceof Seaweed) {
+			Object seaweed = ocean.getWeedAt(where.getRow(), where.getCol());
+			if(seaweed instanceof Seaweed && ocean.getObjectAt(where) == null) {
 				Seaweed food = (Seaweed) seaweed;
 				foodLevel = food.getAmmount();
 				return where;
