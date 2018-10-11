@@ -21,4 +21,14 @@ public class Seaweed {
 	public int getAmmount() {
 		return this.ammount;
 	}
+	
+	public void regenerate() {
+		if(this.ammount<10) {
+			this.ammount++;
+		}
+	}
+	
+	public void grow() {
+		
+	}
 }
