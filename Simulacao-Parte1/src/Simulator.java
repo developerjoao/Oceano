@@ -5,15 +5,14 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * @author João Cabral e Sandino
+ * @author Joï¿½o Cabral e Sandino
  */
 
 public class Simulator
 {
-	private static final double SARDINE_CREATION_PROBABILITY = 0.08;
-	private static final double TUNA_CREATION_PROBABILITY = 0.06;
-	private static final double SHARK_CREATION_PROBABILITY = 0.02;
-	private static final double SEAWEED_CREATION_PROBABILITY = 0.04;
+	private static final double SARDINE_CREATION_PROBABILITY = 0.02;
+	private static final double TUNA_CREATION_PROBABILITY = 0.02;
+	private static final double SHARK_CREATION_PROBABILITY = 0.06;
 	// Constants representing configuration information for the simulation.
     // The default width for the grid.
     private static final int DEFAULT_WIDTH = 50;
@@ -31,7 +30,7 @@ public class Simulator
     public static void main(String[] args) 
     {
         Simulator sim = new Simulator( 100, 200);
-        sim.run(100);
+        sim.run(500);
     }
     
     
@@ -115,7 +114,7 @@ public class Simulator
 	{
 		step = 0;
 		fishes.clear();
-		//populateSeaweed();
+		populateSeaweed();
 		populate();
     
 		// Show the starting state in the view.
@@ -123,12 +122,12 @@ public class Simulator
 	}
 	
 	public void populateSeaweed(){
-		ocean.clear();
+		ocean.clearWeed();
         for(int row = 0; row < ocean.getHeight(); row++) {
             for(int col = 0; col < ocean.getWidth(); col++) {
                 Location location = new Location(row, col);
                 Seaweed seaweed = new Seaweed(ocean, location);
-                ocean.place(seaweed, location);
+                ocean.placeWeed(seaweed, location);
             }
     	}
     }

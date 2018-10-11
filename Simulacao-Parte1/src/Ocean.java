@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * @author João Cabral e Sandino
+ * @author Joï¿½o Cabral e Sandino
  */
 public class Ocean
 {
@@ -15,6 +15,7 @@ public class Ocean
 	 private int height, width;
 	 
 	 private Object[][] ocean;
+	 private Object[][] seaweeds;
     /**
      * Represent an ocean of the given dimensions.
      * @param height The height of the ocean.
@@ -25,6 +26,7 @@ public class Ocean
     	this.height = height;
     	this.width = width;
     	ocean = new Object[height][width];
+    	seaweeds = new Object[height][width];
     }
     
     /**
@@ -54,6 +56,14 @@ public class Ocean
         return this.width;
     }
     
+    public void clearWeed(){
+    	for(int row = 0; row < height; row++) {
+            for(int col = 0; col < width; col++) {
+                seaweeds[row][col] = null;
+            }
+        }
+    }
+    
     /**
      * Empty the field.
      */
@@ -73,6 +83,14 @@ public class Ocean
     public void clear(Location location)
     {
         ocean[location.getRow()][location.getCol()] = null;
+    }
+    
+    public void placeWeed(Object seaweed, int row, int col){
+    	placeWeed(seaweed, new Location(row,col));
+    }
+    
+    public void placeWeed(Object seaweed, Location location){
+    	seaweeds[location.getRow()][location.getCol()] = seaweed;
     }
     
     /**
@@ -125,6 +143,22 @@ public class Ocean
     public Object getObjectAt(int row, int col)
     {
         return ocean[row][col];
+    }
+    
+    public Object getWeedAt(Location location)
+    {
+        return getWeedAt(location.getRow(), location.getCol());
+    }
+    
+    /**
+     * Return the fish at the given location, if any.
+     * @param row The desired row.
+     * @param col The desired column.
+     * @return The fish at the given location, or null if there is none.
+     */
+    public Object getWeedAt(int row, int col)
+    {
+        return seaweeds[row][col];
     }
     
     /**
