@@ -12,6 +12,7 @@ public abstract class Fish
 	private boolean alive;
 	private Ocean ocean;
 	private Location location;
+	
 	/**
 	 * Creates a new Fish in the ocean.
 	 * 

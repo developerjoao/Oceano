@@ -23,6 +23,12 @@ public class Tuna extends Fish
 	
 	private int foodLevel;
 	
+	/**
+	 * Creates a new Tuna.
+	 * @param randomAge If true, sets a random value of age and food to this Tuna.
+	 * @param ocean Sets the ocean it's into.
+	 * @param location Sets it's location in the ocean.
+	 */
 	public Tuna(boolean randomAge, Ocean ocean, Location location) 
 	{
 		super(ocean, location);

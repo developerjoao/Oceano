@@ -25,12 +25,11 @@ public class Shark extends Fish
     private int foodLevel;
     
     /**
-     * Cria um tubarão, pode ser criado como novo, ou com uma idade e nível de comida aleatórios
-     * @param randomAge Se true, o tubarão terá idade e nível de comida aleatórios
-     * @param ocean O oceano ocupado
-     * @param location A localização no oceano
+     * Creates a new Shark.
+     * @param randomAge If true, sets a random value of age and food for this Shark.
+     * @param ocean Sets the ocean it's into.
+     * @param location Sets it's location in the ocean.
      */
-    
     public Shark(boolean randomAge, Ocean ocean, Location location)
     {
     	super(ocean, location);

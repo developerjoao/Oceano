@@ -11,7 +11,11 @@ public class Seaweed {
 	private Location location;
 	private static final Random rand = new Random();
 	
-	
+	/**
+	 * Creates a new Seaweed
+	 * @param ocean Sets the ocean it's into.
+	 * @param location Sets the it's location in the Seaweed field.
+	 */
 	public Seaweed(Ocean ocean, Location location){
 		this.ocean = ocean;
 		this.location = location;

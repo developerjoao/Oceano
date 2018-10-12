@@ -26,6 +26,12 @@ public class Sardine extends Fish
 	
 	private int foodLevel;
 	
+    /**
+     * Creates a new Sardine.
+     * @param randomAge If true, sets a random value of age and food for this Sardine.
+     * @param ocean Sets the ocean it's into.
+     * @param location Sets it's location in the ocean.
+     */
 	public Sardine(boolean randomAge, Ocean ocean, Location location)
 	{
 		super(ocean, location);
