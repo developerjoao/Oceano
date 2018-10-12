@@ -13,10 +13,10 @@ public abstract class Fish
 	private Ocean ocean;
 	private Location location;
 	/**
-	 * Cria um novo animal no Oceano
+	 * Creates a new Fish in the ocean.
 	 * 
-	 * @param ocean O oceano ocupado atualmente
-	 * @param location A localização no oceano
+	 * @param ocean The ocean to occupy.
+	 * @param location The given location in the ocean.
 	 */
 	public Fish(Ocean ocean, Location location)
 	{
@@ -26,14 +26,14 @@ public abstract class Fish
 	}
 	
 	/**
-	 * Faz o peixe agir
+	 * Makes the fish act.
 	 * @param newFishes Uma lista de peixes
 	 */
 	abstract public void act(List<Fish> newFishes);
 	
 	/**
-	 * verifica se o peixe está vivo ou não
-	 * @return true se o peixe está vivo
+	 * Verifies wether the fish is alive.
+	 * @return True if the fish is alive.
 	 */
 	public boolean isAlive()
 	{
@@ -41,8 +41,7 @@ public abstract class Fish
 	}
 	
 	/**
-	 * Indica que o peixe não está mais vivo
-	 * e o remove do oceano
+	 * Set the fish to dead and removes from the ocean
 	 */
 	public void setDead()
 	{
@@ -55,8 +54,8 @@ public abstract class Fish
 	}
 	
 	/**
-	 * Retorna a localização do peixe
-	 * @return A localização do peixe
+	 * Return the Fish location.
+	 * @return The Fish location.
 	 */
 	public Location getLocation()
 	{
@@ -64,8 +63,8 @@ public abstract class Fish
 	}
 	
 	/**
-	 * Retorna o oceano do peixe
-	 * @return O oceano do peixe
+	 * Return the ocean that the Fish is into.
+	 * @return The ocean that the Fish is into.
 	 */
 	public Ocean getOcean()
 	{
@@ -73,8 +72,8 @@ public abstract class Fish
 	}
 	
 	/**
-	 * Coloca o peixe numa nova localização do respectivo oceano
-	 * @param newLocation A nova localização do peixe
+	 * Puts the Fish in a given location
+	 * @param newLocation The Fish's new location.
 	 */
 	public void setLocation(Location newLocation) 
 	{

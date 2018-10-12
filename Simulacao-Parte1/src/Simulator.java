@@ -34,7 +34,6 @@ public class Simulator
     }
     
     
-    
     public Simulator(int height, int width)
     {
     	if(height <= 0 || width <= 0) {
@@ -56,11 +55,13 @@ public class Simulator
         reset();
     }
     
+    /**
+     * Run the simulation until it reaches the wanted quantity of steps.
+     * @param steps The quantity of steps the simulation will simulate.
+     */
     public void run(int steps)
     {
         simulate(steps);
-        
-        //simView.showStatus(0, ocean);
     }
 
     /**
@@ -87,7 +88,7 @@ public class Simulator
     /**
      * Run the simulation from its current state for a single step.
      * Iterate over the whole field updating the state of each
-     * fox and rabbit.
+     * fish and seaweed.
      */
     public void simulateOneStep()
     {
@@ -112,6 +113,9 @@ public class Simulator
         simView.showStatus(step, ocean);
     }
 
+    /**
+     * Clears both the Seaweed field and Ocean and populate both of them with Fish and Seaweed.
+     */
 	public void reset()
 	{
 		step = 0;
@@ -123,6 +127,9 @@ public class Simulator
 		simView.showStatus(step, ocean);
 	}
 	
+	/**
+	 * Populates the Seaweed field with Seaweeds that gain a random amount of food.
+	 */
 	public void populateSeaweed(){
 		ocean.clearWeed();
         for(int row = 0; row < ocean.getHeight(); row++) {

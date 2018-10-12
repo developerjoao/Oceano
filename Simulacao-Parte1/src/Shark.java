@@ -43,6 +43,10 @@ public class Shark extends Fish
     	}
     }
     
+	/**
+	 * Method that represents the acts of a Shark.
+	 * @see Fish#act(java.util.List)
+	 */
     public void act(List<Fish> newSharks)
     {
     	incrementAge();
@@ -67,6 +71,9 @@ public class Shark extends Fish
     	}
     }
     
+	/**
+	 * Method that increments the age of the Shark.
+	 */
     private void incrementAge() 
     {
     	age++;
@@ -75,6 +82,9 @@ public class Shark extends Fish
     	}
     }
     
+	/**
+	 * Method that increments the hunger of the Sardine.
+	 */
     private void incrementHunger() 
     {
     	foodLevel--;
@@ -83,6 +93,11 @@ public class Shark extends Fish
     	}
     }
     
+    /**
+     * Finds an adjacent Shark so this Shark can try to stay alone.
+     * @param location This Shark location.
+     * @return
+     */
     private Location findShark(Location location)
     {
     	Ocean ocean = getOcean();
@@ -101,6 +116,10 @@ public class Shark extends Fish
     	return null;
     }
     
+	/**
+	 * Method that tries to find Tuna and Sardines to feed the Shark, preferring Tunas over Sardines.
+	 * @return The location where it shall swim into.
+	 */
     private Location findFood(Location location) 
     {
     	Ocean ocean = getOcean();
@@ -128,6 +147,9 @@ public class Shark extends Fish
     	return null;
     }
     
+	/**
+	 * Method that spawns new Sharks in the ocean.
+	 */
     private void giveBirth(List<Fish> newSharks) 
     {
     	Ocean ocean = getOcean();
@@ -140,6 +162,10 @@ public class Shark extends Fish
     	}
     }
     
+	/**
+	 * Method 
+	 * @return
+	 */
     private int breed()
     {
     	int births = 0;
@@ -149,26 +175,12 @@ public class Shark extends Fish
     	return births;
     }
     
+	/**
+	 * Method that returns wether the Shark can breed or not.
+	 * @return True if the age is bigger than the Shark breeding age.
+	 */
     private boolean canBreed()
     {
     	return age >= BREEDING_AGE;
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    }  
 }

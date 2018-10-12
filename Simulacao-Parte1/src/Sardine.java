@@ -39,6 +39,11 @@ public class Sardine extends Fish
 		}
 	}
 	
+	
+	/**
+	 * Method that represents the acts of a Sardine.
+	 * @see Fish#act(java.util.List)
+	 */
 	public void act(List<Fish> newSardines)
 	{
 		incrementAge();
@@ -59,6 +64,9 @@ public class Sardine extends Fish
 		}
 	}
 	
+	/**
+	 * Method that increments the age of the Sardine.
+	 */
 	private void incrementAge()
 	{
 		age++;
@@ -67,6 +75,9 @@ public class Sardine extends Fish
 		}
 	}
 	
+	/**
+	 * Method that increments the hunger of the Sardine.
+	 */
 	private void incrementHunger()
 	{
 		foodLevel--;
@@ -75,6 +86,9 @@ public class Sardine extends Fish
 		}
 	}
 	
+	/**
+	 * Method that tries to find Seaweed to feed the Sardine.
+	 */
 	private Location findFood(Location location)
 	{
 		Ocean ocean = getOcean();
@@ -85,7 +99,7 @@ public class Sardine extends Fish
 			Object seaweed = ocean.getWeedAt(where.getRow(), where.getCol());
 			if(seaweed instanceof Seaweed && ocean.getObjectAt(where) == null) {
 				Seaweed food = (Seaweed) seaweed;
-				foodLevel = food.getAmmount();
+				foodLevel = food.getAmount();
 				food.eaten();
 				return where;
 			}
@@ -94,6 +108,9 @@ public class Sardine extends Fish
 		return null;
 	}
 	
+	/**
+	 * Method that spawns new Sardines in the ocean.
+	 */
 	private void giveBirth(List<Fish> newSardines)
 	{
 		Ocean ocean = getOcean();
@@ -106,6 +123,10 @@ public class Sardine extends Fish
 		}
 	}
 	
+	/**
+	 * Method 
+	 * @return
+	 */
 	private int breed()
 	{
 		int births = 0;
@@ -115,34 +136,12 @@ public class Sardine extends Fish
 		return births;
 	}
 	
+	/**
+	 * Method that returns wether the Sardine can breed or not.
+	 * @return True if the age is bigger than the Sardine breeding age.
+	 */
 	private boolean canBreed()
 	{
 		return age >= BREEDING_AGE;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }

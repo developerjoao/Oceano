@@ -56,6 +56,9 @@ public class Ocean
         return this.width;
     }
     
+    /**
+     * Empty the seaweed field.
+     */
     public void clearWeed(){
     	for(int row = 0; row < height; row++) {
             for(int col = 0; col < width; col++) {
@@ -65,7 +68,7 @@ public class Ocean
     }
     
     /**
-     * Empty the field.
+     * Empty the ocean.
      */
     public void clear()
     {
@@ -85,10 +88,21 @@ public class Ocean
         ocean[location.getRow()][location.getCol()] = null;
     }
     
+    /**
+     * Places a Seaweed in the ocean at a given row and column.
+     * @param seaweed The seaweed to place.
+     * @param row The row to place.
+     * @param col The column to place.
+     */
     public void placeWeed(Object seaweed, int row, int col){
     	placeWeed(seaweed, new Location(row,col));
     }
     
+    /**
+     * Places a weed in the ocean at given location.
+     * @param seaweed The seaweed to place.
+     * @param location Where to place the Seaweed.
+     */
     public void placeWeed(Object seaweed, Location location){
     	seaweeds[location.getRow()][location.getCol()] = seaweed;
     }
@@ -118,6 +132,11 @@ public class Ocean
         ocean[location.getRow()][location.getCol()] = fish;
     }
     
+    /**
+     * Return a random adjacent location from the given location
+     * @param location Where in the field.
+     * @return The random adjacent location.
+     */
     public Location randomAdjacentLocation(Location location)
     {
         List<Location> adjacent = adjacentLocations(location);
@@ -145,13 +164,18 @@ public class Ocean
         return ocean[row][col];
     }
     
+    /**
+     * Return the Seaweed at the given location, if any.
+     * @param location Where in the field.
+     * @return The fish at the given location, or null if there is none.
+     */
     public Object getWeedAt(Location location)
     {
         return getWeedAt(location.getRow(), location.getCol());
     }
     
     /**
-     * Return the fish at the given location, if any.
+     * Return the Seaweed at the given location, if any.
      * @param row The desired row.
      * @param col The desired column.
      * @return The fish at the given location, or null if there is none.
@@ -161,6 +185,10 @@ public class Ocean
         return seaweeds[row][col];
     }
     
+    /**
+     * Method that will increment the ammount of every Seaweed in the ocean, plus growing the
+     * Seaweeds that haven't been eaten in the last step.
+     */
     public void growWeed() {
     	Random rand = new Random();
         for(int row = 0; row < height; row++) {

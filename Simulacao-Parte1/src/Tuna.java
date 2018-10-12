@@ -36,6 +36,10 @@ public class Tuna extends Fish
 		}
 	}
 	
+	/**
+	 * Method that represents the acts of a Tuna.
+	 * @see Fish#act(java.util.List)
+	 */
 	public void act(List<Fish> newTunas)
 	{
 		incrementAge();
@@ -56,6 +60,9 @@ public class Tuna extends Fish
 		}
 	}
 	
+	/**
+	 * Method that increments the age of the Tuna.
+	 */
 	private void incrementAge()
 	{
 		age++;
@@ -64,6 +71,9 @@ public class Tuna extends Fish
 		}
 	}
 	
+	/**
+	 * Method that increments the hunger of the Tuna.
+	 */
 	private void incrementHunger()
 	{
 		foodLevel--;
@@ -72,6 +82,9 @@ public class Tuna extends Fish
 		}
 	}
 	
+	/**
+	 * Method that tries to find Sardines to feed the Tuna.
+	 */
 	private Location findFood(Location location)
 	{
 		Ocean ocean = getOcean();
@@ -93,6 +106,9 @@ public class Tuna extends Fish
 		return null;
 	}
 	
+	/**
+	 * Method that spawns new Tunas in the ocean.
+	 */
 	private void giveBirth(List<Fish> newTunas) {
 		Ocean ocean = getOcean();
 		List<Location> free = ocean.getFreeAdjacentLocations(getLocation());
@@ -104,6 +120,10 @@ public class Tuna extends Fish
 		}
 	}
 	
+	/**
+	 * 
+	 * @return
+	 */
 	private int breed()
 	{
 		int births = 0;
@@ -113,17 +133,12 @@ public class Tuna extends Fish
 		return births;
 	}
 	
+	/**
+	 * Method that returns wether the Tuna can breed or not.
+	 * @return True if the age is bigger than the Tuna's breeding age.
+	 */
 	private boolean canBreed()
 	{
 		return age >= BREEDING_AGE;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }
