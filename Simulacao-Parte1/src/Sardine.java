@@ -47,7 +47,7 @@ public class Sardine extends Fish
 	
 	
 	/**
-	 * Method that represents the acts of a Sardine.
+	 * Represents the acts of a Sardine.
 	 * @see Fish#act(java.util.List)
 	 */
 	public void act(List<Fish> newSardines)
@@ -71,7 +71,7 @@ public class Sardine extends Fish
 	}
 	
 	/**
-	 * Method that increments the age of the Sardine.
+	 * Increments the age of the Sardine.
 	 */
 	private void incrementAge()
 	{
@@ -82,7 +82,7 @@ public class Sardine extends Fish
 	}
 	
 	/**
-	 * Method that increments the hunger of the Sardine.
+	 * Increments the hunger of the Sardine.
 	 */
 	private void incrementHunger()
 	{
@@ -93,7 +93,7 @@ public class Sardine extends Fish
 	}
 	
 	/**
-	 * Method that tries to find Seaweed to feed the Sardine.
+	 * Tries to find Seaweed to feed the Sardine.
 	 */
 	private Location findFood(Location location)
 	{
@@ -115,7 +115,7 @@ public class Sardine extends Fish
 	}
 	
 	/**
-	 * Method that spawns new Sardines in the ocean.
+	 * Spawns new Sardines in the ocean.
 	 */
 	private void giveBirth(List<Fish> newSardines)
 	{
@@ -143,7 +143,7 @@ public class Sardine extends Fish
 	}
 	
 	/**
-	 * Method that returns wether the Sardine can breed or not.
+	 * Returns wether the Sardine can breed or not.
 	 * @return True if the age is bigger than the Sardine breeding age.
 	 */
 	private boolean canBreed()

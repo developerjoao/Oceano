@@ -23,7 +23,7 @@ public class Seaweed {
 	}
 	
 	/**
-	 * Method that returns the value of wasEaten, that indicates wether the Seaweed was eaten or not.
+	 * Returns the value of wasEaten, that indicates wether the Seaweed was eaten or not.
 	 * @return True if this Seaweed was eaten.
 	 */
 	public boolean getEaten() {
@@ -31,21 +31,21 @@ public class Seaweed {
 	}
 	
 	/**
-	 * Method that sets wasEaten to true, indicating it was eaten.
+	 * Sets wasEaten to true, indicating it was eaten.
 	 */
 	public void eaten() {
 		this.wasEaten = true;
 	}
 	
 	/**
-	 * Method that sets wasEaten to false, enabling it to grow during the simulation.
+	 * Sets wasEaten to false, enabling it to grow during the simulation.
 	 */
 	public void enableGrow() {
 		this.wasEaten = false;
 	}
 	
 	/**
-	 * Method that returns the amount of food that the Seaweed gives to the Sardine.
+	 * Returns the amount of food that the Seaweed gives to the Sardine.
 	 * @return The amount of food that this Seaweed provide.
 	 */
 	public int getAmount() {
@@ -53,14 +53,14 @@ public class Seaweed {
 	}
 	
 	/**
-	 * Method that sets the value of the amount of food this Seaweed gives in a random number from 0-10.
+	 * Sets the value of the amount of food this Seaweed provides in a random number from 0-10.
 	 */
 	public void regenerate(int regen) {
 		this.amount = regen;
 	}
 	
 	/**
-	 * Method that places a new Seaweed adjacent from the current Seaweed acting as it's grown to another location.
+	 * Places a new Seaweed adjacent from the current Seaweed acting as it's grown to another location.
 	 */
 	public void grow() {
 		Seaweed weed = new Seaweed(ocean,ocean.randomAdjacentLocation(this.location));

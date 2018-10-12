@@ -187,7 +187,7 @@ public class Ocean
     }
     
     /**
-     * Method that will increment the ammount of every Seaweed in the ocean, plus growing the
+     * Increment the amount of every Seaweed in the ocean, plus growing the
      * Seaweeds that haven't been eaten in the last step.
      */
     public void growWeed() {

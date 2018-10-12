@@ -43,7 +43,7 @@ public class Shark extends Fish
     }
     
 	/**
-	 * Method that represents the acts of a Shark.
+	 * Represents the acts of a Shark.
 	 * @see Fish#act(java.util.List)
 	 */
     public void act(List<Fish> newSharks)
@@ -71,7 +71,7 @@ public class Shark extends Fish
     }
     
 	/**
-	 * Method that increments the age of the Shark.
+	 * Increments the age of the Shark.
 	 */
     private void incrementAge() 
     {
@@ -82,7 +82,7 @@ public class Shark extends Fish
     }
     
 	/**
-	 * Method that increments the hunger of the Sardine.
+	 * Increments the hunger of the Sardine.
 	 */
     private void incrementHunger() 
     {
@@ -116,7 +116,7 @@ public class Shark extends Fish
     }
     
 	/**
-	 * Method that tries to find Tuna and Sardines to feed the Shark, preferring Tunas over Sardines.
+	 * Tries to find Tuna and Sardines to feed the Shark, preferring Tunas over Sardines.
 	 * @return The location where it shall swim into.
 	 */
     private Location findFood(Location location) 
@@ -147,7 +147,7 @@ public class Shark extends Fish
     }
     
 	/**
-	 * Method that spawns new Sharks in the ocean.
+	 * Spawns new Sharks in the ocean.
 	 */
     private void giveBirth(List<Fish> newSharks) 
     {
@@ -175,7 +175,7 @@ public class Shark extends Fish
     }
     
 	/**
-	 * Method that returns wether the Shark can breed or not.
+	 * Returns wether the Shark can breed or not.
 	 * @return True if the age is bigger than the Shark breeding age.
 	 */
     private boolean canBreed()
