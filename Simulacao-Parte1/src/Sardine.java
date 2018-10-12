@@ -130,8 +130,8 @@ public class Sardine extends Fish
 	}
 	
 	/**
-	 * Method 
-	 * @return
+	 * Tells how many births this Sardine will give.
+	 * @return The number of childs this Sardine will give.
 	 */
 	private int breed()
 	{

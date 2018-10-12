@@ -162,8 +162,8 @@ public class Shark extends Fish
     }
     
 	/**
-	 * Method 
-	 * @return
+	 * Tells how many births this Shark will give.
+	 * @return The number of childs this Shark will give.
 	 */
     private int breed()
     {

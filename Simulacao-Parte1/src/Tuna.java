@@ -127,8 +127,8 @@ public class Tuna extends Fish
 	}
 	
 	/**
-	 * 
-	 * @return
+	 * Tells how many births this Tuna will give.
+	 * @return The number of childs this Tuna will give.
 	 */
 	private int breed()
 	{
