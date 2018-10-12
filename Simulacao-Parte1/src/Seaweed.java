@@ -1,7 +1,7 @@
 import java.util.Random;
 /**
  * 
- * @author João Cabral e Sandino
+ * @author Joao Cabral e Sandino
  * @version (a version number or a date)
  */
 public class Seaweed {

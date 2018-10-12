@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * @author Jo�o Cabral e Sandino
+ * @author Joao Cabral e Sandino
  */
 public class Ocean
 {
@@ -16,6 +16,7 @@ public class Ocean
 	 
 	 private Object[][] ocean;
 	 private Object[][] seaweeds;
+	 
     /**
      * Represent an ocean of the given dimensions.
      * @param height The height of the ocean.

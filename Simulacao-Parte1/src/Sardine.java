@@ -8,7 +8,7 @@ import java.util.Random;
  * They exhibit flocking behaviour - they tend to seek company. 
  * If they spot a predator close by, they panic.
  * 
- * @author Sandino e Jo�o Cabral
+ * @author Sandino e Joao Cabral
  * 
  */
 public class Sardine extends Fish

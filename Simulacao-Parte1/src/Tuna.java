@@ -6,7 +6,7 @@ import java.util.Random;
  * Tuna age, move, breed, and die.
  * They eat herring.
  * 
- * @author Sandino
+ * @author Sandino e Joao Cabral
  */
 public class Tuna extends Fish
 {
